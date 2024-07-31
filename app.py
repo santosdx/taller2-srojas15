@@ -9,6 +9,9 @@ from controllers.animal_controller import AnimalController
 app = Flask(__name__)
 api = Api(app)
 
+@app.route("/")
+def home():
+    return "Bienvenido."
 
 @app.route("/animal/gato")
 def gato():
